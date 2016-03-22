@@ -40,8 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Lesson 1\BinaryGap.cs" />
+    <Compile Include="Lesson 2\CyclicRotation.cs" />
+    <Compile Include="Lesson 2\OddOccurrencesInArray.cs" />
+    <Compile Include="Lesson 3\FrogJmp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Lesson 1\BinaryGap.md" />
+    <None Include="Lesson 2\OddOccurrencesInArray.md" />
+    <None Include="Lesson 2\CyclicRotation.md" />
+    <None Include="Lesson 3\FrogJmp.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
