@@ -43,6 +43,7 @@
     <Compile Include="Lesson 1\BinaryGap.cs" />
     <Compile Include="Lesson 2\CyclicRotation.cs" />
     <Compile Include="Lesson 2\OddOccurrencesInArray.cs" />
+    <Compile Include="Lesson 3\PermMissingElem.cs" />
     <Compile Include="Lesson 3\TapeEquilibrium.cs" />
     <Compile Include="Lesson 3\FrogJmp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +53,7 @@
     <None Include="Lesson 1\BinaryGap.md" />
     <None Include="Lesson 2\OddOccurrencesInArray.md" />
     <None Include="Lesson 2\CyclicRotation.md" />
+    <None Include="Lesson 3\PermMissingElem.md" />
     <None Include="Lesson 3\TapeEquilibrium.md" />
     <None Include="Lesson 3\FrogJmp.md" />
   </ItemGroup>
