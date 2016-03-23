@@ -53,6 +53,7 @@
     <Compile Include="Lesson 1\BinaryGapTest.cs" />
     <Compile Include="Lesson 2\OddOccurrencesInArrayTest.cs" />
     <Compile Include="Lesson 2\CyclicRotationTest.cs" />
+    <Compile Include="Lesson 3\TapeEquilibriumTest.cs" />
     <Compile Include="Lesson 3\FrogJmpTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
