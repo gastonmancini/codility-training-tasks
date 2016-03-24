@@ -46,6 +46,7 @@
     <Compile Include="Lesson 3\PermMissingElem.cs" />
     <Compile Include="Lesson 3\TapeEquilibrium.cs" />
     <Compile Include="Lesson 3\FrogJmp.cs" />
+    <Compile Include="Lesson 4\PermCheck.cs" />
     <Compile Include="Lesson 4\FrogRiverOne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,6 +58,7 @@
     <None Include="Lesson 3\PermMissingElem.md" />
     <None Include="Lesson 3\TapeEquilibrium.md" />
     <None Include="Lesson 3\FrogJmp.md" />
+    <None Include="Lesson 4\PermCheck.md" />
     <None Include="Lesson 4\FrogRiverOne.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -56,6 +56,7 @@
     <Compile Include="Lesson 3\PermMissingElemTest.cs" />
     <Compile Include="Lesson 3\TapeEquilibriumTest.cs" />
     <Compile Include="Lesson 3\FrogJmpTest.cs" />
+    <Compile Include="Lesson 4\PermCheckTest.cs" />
     <Compile Include="Lesson 4\FrogRiverOneTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
