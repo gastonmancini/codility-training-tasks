@@ -49,6 +49,7 @@
     <Compile Include="Lesson 4\MissingInteger.cs" />
     <Compile Include="Lesson 4\PermCheck.cs" />
     <Compile Include="Lesson 4\FrogRiverOne.cs" />
+    <Compile Include="Lesson 5\PassingCars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -62,6 +63,7 @@
     <None Include="Lesson 4\MissingInteger.md" />
     <None Include="Lesson 4\PermCheck.md" />
     <None Include="Lesson 4\FrogRiverOne.md" />
+    <None Include="Lesson 5\PassingCars.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
