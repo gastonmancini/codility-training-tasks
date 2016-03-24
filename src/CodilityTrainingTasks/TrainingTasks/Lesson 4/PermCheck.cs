@@ -1,4 +1,6 @@
-﻿namespace TrainingTasks.Lesson_4
+﻿using System.Linq;
+
+namespace TrainingTasks.Lesson_4
 {
     public class PermCheck
     {
@@ -19,11 +21,11 @@
 
             return 1;
         }
-        
+
         //private int NlogN(int[] A)
         //{
         //    // O(N * log(N))
-            
+
         //    var intArr = Enumerable.Range(1, A.Length).Select(x => x).ToArray();
 
         //    return A.OrderBy(x => x).SequenceEqual(intArr) ? 1 : 0;
@@ -36,6 +38,24 @@
         //    for (int i = 1; i <= A.Length; i++)
         //    {
         //        if (!A.Contains(i)) return 0;
+        //    }
+
+        //    return 1;
+        //}
+
+        //private int NlogN_v2(int[] A)
+        //{
+        //    // O(N * log(N))
+
+        //    var list = A.ToList();
+        //    list.Sort();
+
+        //    int count = 1;
+
+        //    foreach (var number in list)
+        //    {
+        //        if (number != count) return 0;
+        //        count++;
         //    }
 
         //    return 1;
