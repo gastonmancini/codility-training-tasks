@@ -57,6 +57,7 @@
     <Compile Include="Lesson 7\Nesting.cs" />
     <Compile Include="Lesson 7\Brackets.cs" />
     <Compile Include="Lesson 7\Fish.cs" />
+    <Compile Include="Lesson 8\EquiLeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -78,6 +79,7 @@
     <None Include="Lesson 7\Nesting.md" />
     <None Include="Lesson 7\Brackets.md" />
     <None Include="Lesson 7\Fish.md" />
+    <None Include="Lesson 8\EquiLeader.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

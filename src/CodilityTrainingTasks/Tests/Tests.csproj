@@ -67,6 +67,7 @@
     <Compile Include="Lesson 7\NestingTest.cs" />
     <Compile Include="Lesson 7\BracketsTest.cs" />
     <Compile Include="Lesson 7\FishTest.cs" />
+    <Compile Include="Lesson 8\EquiLeaderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
