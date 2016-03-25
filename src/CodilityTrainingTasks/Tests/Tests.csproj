@@ -64,6 +64,7 @@
     <Compile Include="Lesson 6\MaxProductOfThreeTest.cs" />
     <Compile Include="Lesson 6\TriangleTest.cs" />
     <Compile Include="Lesson 6\DistinctTest.cs" />
+    <Compile Include="Lesson 7\BracketsTest.cs" />
     <Compile Include="Lesson 7\FishTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
