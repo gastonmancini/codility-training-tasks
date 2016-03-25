@@ -54,6 +54,7 @@
     <Compile Include="Lesson 6\MaxProductOfThree.cs" />
     <Compile Include="Lesson 6\Triangle.cs" />
     <Compile Include="Lesson 6\Distinct.cs" />
+    <Compile Include="Lesson 7\Fish.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -72,6 +73,7 @@
     <None Include="Lesson 6\MaxProductOfThree.md" />
     <None Include="Lesson 6\Triangle.md" />
     <None Include="Lesson 6\Distinct.md" />
+    <None Include="Lesson 7\Fish.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
