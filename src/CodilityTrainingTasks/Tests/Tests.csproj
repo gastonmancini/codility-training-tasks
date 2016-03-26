@@ -69,6 +69,7 @@
     <Compile Include="Lesson 7\FishTest.cs" />
     <Compile Include="Lesson 8\DominatorTest.cs" />
     <Compile Include="Lesson 8\EquiLeaderTest.cs" />
+    <Compile Include="Lesson 9\MaxSliceSumTest.cs" />
     <Compile Include="Lesson 9\MaxDoubleSliceSumTest.cs" />
     <Compile Include="Lesson 9\MaxProfitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

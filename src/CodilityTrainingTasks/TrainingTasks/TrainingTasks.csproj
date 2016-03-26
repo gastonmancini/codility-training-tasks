@@ -59,6 +59,7 @@
     <Compile Include="Lesson 7\Fish.cs" />
     <Compile Include="Lesson 8\Dominator.cs" />
     <Compile Include="Lesson 8\EquiLeader.cs" />
+    <Compile Include="Lesson 9\MaxSliceSum.cs" />
     <Compile Include="Lesson 9\MaxDoubleSliceSum.cs" />
     <Compile Include="Lesson 9\MaxProfit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +85,7 @@
     <None Include="Lesson 7\Fish.md" />
     <None Include="Lesson 8\Dominator.md" />
     <None Include="Lesson 8\EquiLeader.md" />
+    <None Include="Lesson 9\MaxSliceSum.md" />
     <None Include="Lesson 9\MaxDoubleSliceSum.md" />
     <None Include="Lesson 9\MaxProfit.md" />
   </ItemGroup>
