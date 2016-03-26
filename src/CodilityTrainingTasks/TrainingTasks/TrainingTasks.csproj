@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lesson 10\CountFactors.cs" />
     <Compile Include="Lesson 1\BinaryGap.cs" />
     <Compile Include="Lesson 2\CyclicRotation.cs" />
     <Compile Include="Lesson 2\OddOccurrencesInArray.cs" />
@@ -66,6 +67,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Lesson 10\CountFactors.md" />
     <None Include="Lesson 1\BinaryGap.md" />
     <None Include="Lesson 2\OddOccurrencesInArray.md" />
     <None Include="Lesson 2\CyclicRotation.md" />

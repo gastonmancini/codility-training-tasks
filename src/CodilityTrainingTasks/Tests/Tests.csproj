@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Lesson 10\CountFactorsTest.cs" />
     <Compile Include="Lesson 1\BinaryGapTest.cs" />
     <Compile Include="Lesson 2\OddOccurrencesInArrayTest.cs" />
     <Compile Include="Lesson 2\CyclicRotationTest.cs" />
@@ -80,7 +81,6 @@
       <Name>TrainingTasks</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
