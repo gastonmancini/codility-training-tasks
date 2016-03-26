@@ -8,6 +8,7 @@ namespace TrainingTasks.Lesson_8
         public int solution(int[] A)
         {
             // TODO
+            return 0;
         }
 
         //public int Sloooooooowww(int[] A)
