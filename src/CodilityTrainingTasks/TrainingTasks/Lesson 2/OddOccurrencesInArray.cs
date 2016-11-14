@@ -4,46 +4,50 @@ namespace TrainingTasks.Lesson_2
 {
     public class OddOccurrencesInArray
     {
+        /// <summary>
+        /// If we XOR a number with itself odd number of times the result is 0, otherwise if we XOR even number of times the result is the number itself
+        /// Space-complexity: O(1)
+        /// Time-complexity: O(N)
+        /// </summary>
         public int solution(int[] A)
         {
+            if (A.Length % 2 == 0) throw new Exception("The number of elements must be odd.");
+
             int unpaired = 0;
 
-            for (int i = 0; i < A.Length; i++)
+            foreach (var number in A)
             {
-                unpaired ^= A[i];
+                unpaired ^= number;
             }
 
             return unpaired;
         }
 
+        // https://codility.com/demo/results/trainingYZ8GRJ-4FX/
+
         //public int solution(int[] A)
         //{
-        //    // O (N * LOG N)
-        //    Array.Sort(A);
+        //    // Space Complexity O(N)
 
-        //    int previousValue = A[0];
-        //    int count = 1;
+        //    if (A.Length % 2 == 0) throw new Exception("The number of elements must be odd.");
 
-        //    for (int i = 1; i < A.Length; i++)
+        //    var set = new HashSet<int>();
+
+        //    foreach (var number in A)
         //    {
-        //        if (A[i] == previousValue)
+        //        if (set.Contains(number))
         //        {
-        //            previousValue = -1;
-        //            count = 0;
+        //            set.Remove(number);
         //        }
         //        else
         //        {
-        //            if (count == 1)
-        //            {
-        //                break;
-        //            }
-
-        //            previousValue = A[i];
-        //            count++;
+        //            set.Add(number);
         //        }
         //    }
 
-        //    return previousValue;
+        //    return set.First();
+
+        //    // https://codility.com/demo/results/trainingC2G9WH-HT8/
         //}
     }
 }

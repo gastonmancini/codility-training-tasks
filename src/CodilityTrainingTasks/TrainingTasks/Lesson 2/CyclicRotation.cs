@@ -1,24 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace TrainingTasks.Lesson_2
 {
     public class CyclicRotation
     {
+        /// <summary>
+        /// The key of this task is correctness, not performance. Convert the array into a list and use linq.
+        /// Foreach of the desired rotations, copy the last element of the array in the index 0 and remove the last element of the array.
+        /// Space-complexity: O(N)
+        /// Time-complexity: O(N^2)
+        /// </summary>
         public int[] solution(int[] A, int K)
         {
+            if (A.Length == 0 || A.Length == 1) return A;
 
-            if (A.Length == 0) { return A; }
+            var aAsList = A.ToList();
 
-            var list = new List<int>(A);
-
-            for (int i = 0; i < K; i++)
+            for (int i = 1; i <= K; i++)
             {
-                list.Insert(0, list.ElementAt(list.Count - 1));
-                list.RemoveAt(list.Count - 1);
+                aAsList.Insert(0, aAsList.Last());
+                aAsList.RemoveAt(aAsList.Count - 1);
             }
 
-            return list.ToArray();
+            return aAsList.ToArray();
         }
+
+        // https://codility.com/demo/results/trainingUQ2T2N-8TQ/
     }
 }

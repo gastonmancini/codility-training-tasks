@@ -1,36 +1,41 @@
 ﻿using System;
-using System.Linq;
 
 namespace TrainingTasks.Lesson_1
 {
     public class BinaryGap
-    { 
+    {
+        /// <summary>
+        /// Convert the number into a binary array. Iterate the array and calculate the maximum binary gap.
+        /// Space-complexity: O(1)
+        /// Time-complexity: O(N)
+        /// </summary>
         public int solution(int N)
         {
-            var bitString = Convert.ToString(N, 2);
-            int[] bitArray = bitString.ToCharArray().Select(x => Convert.ToInt32(x.ToString())).ToArray();
+            var binaryNumber = Convert.ToString(N, 2);
 
-            int longestBinaryGap = 0;
+            int maxBinaryGap = 0;
             int currentBinaryGap = 0;
 
-            foreach (int bit in bitArray)
+            foreach (var b in binaryNumber)
             {
-                if (bit == 0)
+                if (b == '0') // Compare with a char since we have an string of chars
                 {
                     currentBinaryGap++;
                 }
                 else
                 {
-                    if (currentBinaryGap > longestBinaryGap)
+                    if (currentBinaryGap > maxBinaryGap)
                     {
-                        longestBinaryGap = currentBinaryGap;
+                        maxBinaryGap = currentBinaryGap;
                     }
 
                     currentBinaryGap = 0;
                 }
             }
 
-            return longestBinaryGap;
+            return maxBinaryGap;
         }
+
+        // https://codility.com/demo/results/training57BZZ5-W5Z/
     }
 }

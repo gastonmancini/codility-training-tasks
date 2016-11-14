@@ -1,47 +1,42 @@
 ﻿using System;
+using System.Linq;
 
 namespace TrainingTasks.Lesson_3
 {
     public class TapeEquilibrium
     {
+        /// <summary>
+        /// Sum all the elements in the array. Then, foreach of the elements calculate the first and the second part of P and get the difference. If the current difference is lesser thath the minimal stored one, replace it.
+        /// Space-complexity: O(1)
+        /// Time-complexity: O(N)
+        /// </summary>
         public int solution(int[] A)
         {
-            int arrayLenght = A.Length;
+            if (A.Length < 2 && A.Length > 100000) throw new ArgumentOutOfRangeException("N should be an integer within the range 2..100000");
 
-            if (arrayLenght < 2 || arrayLenght > 100000)
+            int minimalDifference = -1;
+
+            int sum = A.Sum();
+
+            int currentP1 = 0;
+            int currentP2 = sum;
+
+            for (int i = 0; i < A.Length - 1; i++)
             {
-                throw new Exception("N is an integer within the range [2..100,000]");
-            }
+                currentP1 += A[i];
+                currentP2 -= A[i];
 
-            int rightSum = 0;
+                int currentDifference = Math.Abs(currentP1 - currentP2);
 
-            for (int i = 0; i < arrayLenght; i++)
-            {
-                rightSum += A[i];
-            }
-
-            int leftSum = 0;
-            int result = -1;
-
-            for (int i = arrayLenght - 1; i > 0; i--)
-            {
-                leftSum += A[i];
-                rightSum -= A[i];
-
-                var difference = leftSum - rightSum;
-
-                if (difference < 0)
+                if (currentDifference < minimalDifference || minimalDifference < 0)
                 {
-                    difference *= -1;
-                }
-
-                if (result > difference || result == -1)
-                {
-                    result = difference;
+                    minimalDifference = currentDifference;
                 }
             }
 
-            return result;
+            return minimalDifference;
         }
+
+        // https://codility.com/demo/results/trainingG82S87-ZX5/
     }
 }
