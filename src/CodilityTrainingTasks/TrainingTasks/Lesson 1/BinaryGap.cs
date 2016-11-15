@@ -6,8 +6,8 @@ namespace TrainingTasks.Lesson_1
     {
         /// <summary>
         /// Convert the number into a binary array. Iterate the array and calculate the maximum binary gap.
-        /// Space-complexity: O(1)
         /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
         /// </summary>
         public int solution(int N)
         {

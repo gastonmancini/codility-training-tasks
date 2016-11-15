@@ -6,8 +6,8 @@ namespace TrainingTasks.Lesson_2
     {
         /// <summary>
         /// If we XOR a number with itself odd number of times the result is 0, otherwise if we XOR even number of times the result is the number itself
-        /// Space-complexity: O(1)
         /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
         /// </summary>
         public int solution(int[] A)
         {

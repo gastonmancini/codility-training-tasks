@@ -31,6 +31,20 @@ namespace Tests.Lesson_4
             Test(5, array, 6);
         }
 
+        [TestMethod]
+        public void FrogRiverOne_Example_Test_2()
+        {
+            var array = new int[7];
+            array[0] = 1;
+            array[1] = 3;
+            array[2] = 1;
+            array[3] = 3;
+            array[4] = 2;
+            array[5] = 1;
+            array[6] = 3;
+            Test(3, array, 4);
+        }
+
         #endregion
 
         #region Extremes tests

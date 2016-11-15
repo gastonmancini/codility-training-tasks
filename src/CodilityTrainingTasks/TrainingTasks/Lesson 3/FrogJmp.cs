@@ -1,16 +1,17 @@
-﻿namespace TrainingTasks.Lesson_3
+﻿using System;
+
+namespace TrainingTasks.Lesson_3
 {
     public class FrogJmp
     {
+        /// <summary>
+        /// Solution = (Y - X) / D
+        /// Time-complexity: O(1)
+        /// Space-complexity: O(1)
+        /// </summary>
         public int solution(int X, int Y, int D)
         {
-            // return (int)Math.Ceiling((double)(-X + Y) / D);
-
-            if ((-X + Y)%D == 0)
-            {
-                return (-X + Y)/D;
-            }
-            return (-X + Y)/D + 1;
+            return (int)Math.Ceiling((decimal)(Y - X)/D);
         }
     }
 }

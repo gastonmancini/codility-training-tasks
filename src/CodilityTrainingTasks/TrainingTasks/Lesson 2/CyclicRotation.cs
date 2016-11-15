@@ -7,8 +7,8 @@ namespace TrainingTasks.Lesson_2
         /// <summary>
         /// The key of this task is correctness, not performance. Convert the array into a list and use linq.
         /// Foreach of the desired rotations, copy the last element of the array in the index 0 and remove the last element of the array.
-        /// Space-complexity: O(N)
         /// Time-complexity: O(N^2)
+        /// Space-complexity: O(N)
         /// </summary>
         public int[] solution(int[] A, int K)
         {

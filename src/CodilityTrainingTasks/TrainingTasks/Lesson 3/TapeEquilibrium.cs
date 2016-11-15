@@ -7,8 +7,8 @@ namespace TrainingTasks.Lesson_3
     {
         /// <summary>
         /// Sum all the elements in the array. Then, foreach of the elements calculate the first and the second part of P and get the difference. If the current difference is lesser thath the minimal stored one, replace it.
-        /// Space-complexity: O(1)
         /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
         /// </summary>
         public int solution(int[] A)
         {
