@@ -62,6 +62,7 @@
     <Compile Include="Lesson 4\MaxCountersTest.cs" />
     <Compile Include="Lesson 4\PermCheckTest.cs" />
     <Compile Include="Lesson 4\FrogRiverOneTest.cs" />
+    <Compile Include="Lesson 5\MinAvgTwoSliceTest.cs" />
     <Compile Include="Lesson 5\CountDivTest.cs" />
     <Compile Include="Lesson 5\PassingCarsTest.cs" />
     <Compile Include="Lesson 6\MaxProductOfThreeTest.cs" />
