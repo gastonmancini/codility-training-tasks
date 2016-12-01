@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_8;
+using TrainingTasks;
 
-namespace Tests.Lesson_8
+namespace Tests
 {
     [TestClass]
-    public class DominatorTest
+    public class DominatorTests
     {
         private Dominator _dominator;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_8
         {
             _dominator = new Dominator();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void Dominator_Example_Test()
@@ -31,14 +29,6 @@ namespace Tests.Lesson_8
 
             Test(A, 7);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

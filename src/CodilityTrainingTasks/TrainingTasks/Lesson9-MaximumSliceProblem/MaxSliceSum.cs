@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_9
+namespace TrainingTasks
 {
     public class MaxSliceSum
     {

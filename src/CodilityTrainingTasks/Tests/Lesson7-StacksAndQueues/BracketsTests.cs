@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_7;
+using TrainingTasks;
 
-namespace Tests.Lesson_7
+namespace Tests
 {
     [TestClass]
-    public class BracketsTest
+    public class BracketsTests
     {
         private Brackets _brackets;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_7
         {
             _brackets = new Brackets();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void Brackets_Example_Test_Properly_Nested()
@@ -31,10 +29,6 @@ namespace Tests.Lesson_7
 
             Test(s, 0);
         }
-
-        #endregion
-
-        #region Extremes tests
 
         [TestMethod]
         public void Brackets_Test_Empty_String()
@@ -59,8 +53,6 @@ namespace Tests.Lesson_7
 
             Test(s, 0);
         }
-
-        #endregion
 
         private void Test(string S, int expectedResult)
         {

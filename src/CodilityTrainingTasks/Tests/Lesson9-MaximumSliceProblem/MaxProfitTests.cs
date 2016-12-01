@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_9;
+using TrainingTasks;
 
-namespace Tests.Lesson_9
+namespace Tests
 {
     [TestClass]
-    public class MaxProfitTest
+    public class MaxProfitTests
     {
         private MaxProfit _maxProfit;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_9
         {
             _maxProfit = new MaxProfit();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MaxProfit_Example_Test()
@@ -29,14 +27,6 @@ namespace Tests.Lesson_9
 
             Test(A, 356);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

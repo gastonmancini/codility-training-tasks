@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_6;
+using TrainingTasks;
 
-namespace Tests.Lesson_6
+namespace Tests
 {
     [TestClass]
-    public class DistinctTest
+    public class DistinctTests
     {
         private Distinct _distinct;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_6
         {
             _distinct = new Distinct();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void Distinct_Example_Test()
@@ -28,14 +26,6 @@ namespace Tests.Lesson_6
             array[5] = 1;
             Test(array, 3);
         }
-
-        #endregion
-
-        #region Extremes tests
-        
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

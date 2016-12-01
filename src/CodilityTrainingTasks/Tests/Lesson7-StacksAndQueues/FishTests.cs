@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_7;
+using TrainingTasks;
 
-namespace Tests.Lesson_7
+namespace Tests
 {
     [TestClass]
-    public class DistinctTest
+    public class FishTests
     {
         private Fish _fish;
 
@@ -14,10 +14,8 @@ namespace Tests.Lesson_7
             _fish = new Fish();
         }
 
-        #region Example Tests
-
         [TestMethod]
-        public void Distinct_Example_Test()
+        public void Fish_Example_Test()
         {
             var A = new int[5];
             A[0] = 4;
@@ -35,14 +33,6 @@ namespace Tests.Lesson_7
 
             Test(A, B, 2);
         }
-
-        #endregion
-
-        #region Extremes tests
-        
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int[] B, int expectedResult)
         {

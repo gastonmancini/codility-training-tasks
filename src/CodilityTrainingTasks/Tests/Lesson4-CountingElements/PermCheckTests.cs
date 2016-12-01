@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_4;
+using TrainingTasks;
 
-namespace Tests.Lesson_4
+namespace Tests
 {
     [TestClass]
-    public class PermCheckTest
+    public class PermCheckTests
     {
         private PermCheck _permCheck;
 
@@ -14,10 +14,8 @@ namespace Tests.Lesson_4
             _permCheck = new PermCheck();
         }
 
-        #region Example Tests
-
         [TestMethod]
-        public void FrogRiverOne_Example_Test_Is_A_Permutation()
+        public void PermCheck_Example_Test_Is_A_Permutation()
         {
             var array = new int[4];
             array[0] = 4;
@@ -28,7 +26,7 @@ namespace Tests.Lesson_4
         }
 
         [TestMethod]
-        public void FrogRiverOne_Example_Test_Is_Not_A_Permutation()
+        public void PermCheck_Example_Test_Is_Not_A_Permutation()
         {
             var array = new int[3];
             array[0] = 4;
@@ -36,14 +34,6 @@ namespace Tests.Lesson_4
             array[2] = 3;
             Test(array, 0);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] a, int expectedResult)
         {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TrainingTasks.Lesson_4
+namespace TrainingTasks
 {
     public class MissingInteger
     {

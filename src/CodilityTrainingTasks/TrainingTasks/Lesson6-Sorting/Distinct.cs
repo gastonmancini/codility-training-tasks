@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_6
+namespace TrainingTasks
 {
     public class Distinct
     {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_4;
+using TrainingTasks;
 
-namespace Tests.Lesson_4
+namespace Tests
 {
     [TestClass]
-    public class FrogRiverOneTest
+    public class FrogRiverOneTests
     {
         private FrogRiverOne _frogRiverOne;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_4
         {
             _frogRiverOne = new FrogRiverOne();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void FrogRiverOne_Example_Test()
@@ -45,11 +43,6 @@ namespace Tests.Lesson_4
             Test(3, array, 4);
         }
 
-        #endregion
-
-        #region Extremes tests
-
-
         [TestMethod]
         public void FrogRiverOne_Array_With_Single_Element()
         {
@@ -71,8 +64,6 @@ namespace Tests.Lesson_4
             array[7] = 4;
             Test(6, array, -1);
         }
-
-        #endregion
 
         private void Test(int x, int[] a, int expectedResult)
         {

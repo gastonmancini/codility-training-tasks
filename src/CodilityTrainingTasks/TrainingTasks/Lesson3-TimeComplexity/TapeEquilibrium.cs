@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace TrainingTasks.Lesson_3
+namespace TrainingTasks
 {
     public class TapeEquilibrium
     {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_6;
+using TrainingTasks;
 
-namespace Tests.Lesson_6
+namespace Tests
 {
     [TestClass]
-    public class TriangleTest
+    public class TriangleTests
     {
         private Triangle _triangle;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_6
         {
             _triangle = new Triangle();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void Triangle_Example_Test_Exist_Triangular_Triplet()
@@ -40,10 +38,6 @@ namespace Tests.Lesson_6
             Test(array, 0);
         }
 
-        #endregion
-
-        #region Extremes tests
-
         [TestMethod]
         public void Triangle_Extreme_Test_Arith_Overflow()
         {
@@ -53,8 +47,6 @@ namespace Tests.Lesson_6
             array[2] = int.MaxValue;
             Test(array, 1);
         }
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

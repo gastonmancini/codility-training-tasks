@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_10;
+using TrainingTasks;
 
-namespace Tests.Lesson_10
+namespace Tests
 {
     [TestClass]
-    public class MinPerimeterRectangleTest
+    public class MinPerimeterRectangleTests
     {
         private MinPerimeterRectangle _minPerimeterRectangle;
 
@@ -14,17 +14,11 @@ namespace Tests.Lesson_10
             _minPerimeterRectangle = new MinPerimeterRectangle();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void MinPerimeterRectangle_Example_Test()
         {
             Test(30, 22);
         }
-
-        #endregion
-
-        #region Extremes tests
 
         [TestMethod]
         public void MinPerimeterRectangle_One()
@@ -37,8 +31,6 @@ namespace Tests.Lesson_10
         {
             Test(1000000000, 126500);
         }
-
-        #endregion
 
         private void Test(int N, int expectedResult)
         {

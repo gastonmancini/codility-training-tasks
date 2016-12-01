@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_7;
+using TrainingTasks;
 
-namespace Tests.Lesson_7
+namespace Tests
 {
     [TestClass]
-    public class NestingTest
+    public class NestingTests
     {
         private Nesting _nesting;
 
@@ -13,9 +13,7 @@ namespace Tests.Lesson_7
         {
             _nesting = new Nesting();
         }
-
-        #region Example Tests
-
+        
         [TestMethod]
         public void Nesting_Example_Test_Properly_Nested()
         {
@@ -31,10 +29,6 @@ namespace Tests.Lesson_7
 
             Test(s, 0);
         }
-
-        #endregion
-
-        #region Extremes tests
 
         [TestMethod]
         public void Nesting_Test_Empty_String()
@@ -59,8 +53,6 @@ namespace Tests.Lesson_7
 
             Test(s, 0);
         }
-
-        #endregion
 
         private void Test(string S, int expectedResult)
         {

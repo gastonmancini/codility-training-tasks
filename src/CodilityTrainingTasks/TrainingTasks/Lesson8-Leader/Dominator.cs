@@ -1,4 +1,4 @@
-﻿namespace TrainingTasks.Lesson_8
+﻿namespace TrainingTasks
 {
     public class Dominator
     {

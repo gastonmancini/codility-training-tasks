@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_2;
+using TrainingTasks;
 
-namespace Tests.Lesson_2
+namespace Tests
 {
     [TestClass]
-    public class CyclicRotationTest
+    public class CyclicRotationTests
     {
         private CyclicRotation _cyclicRotation;
 
@@ -15,8 +15,6 @@ namespace Tests.Lesson_2
             _cyclicRotation = new CyclicRotation();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void CyclicRotation_Rotate_38976_Three_Times_Is_97638()
         {
@@ -24,19 +22,11 @@ namespace Tests.Lesson_2
             Test(new[] { 3, 8, 9, 7, 6 }, 3, new[] { 9, 7, 6, 3, 8 });
         }
 
-        #endregion
-
-        #region Extremes tests
-
         [TestMethod]
         public void CyclicRotation_Rotate_38976_Zero_Times_Is_38976()
         {
             Test(new[] { 3, 8, 9, 7, 6 }, 0, new[] { 3, 8, 9, 7, 6 });
         }
-
-        // TODO Test correctness
-        
-        #endregion
 
         private void Test(int[] array, int times, int[] expectedResult)
         {

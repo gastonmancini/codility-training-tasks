@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_5;
+using TrainingTasks;
 
-namespace Tests.Lesson_5
+namespace Tests
 {
     [TestClass]
-    public class MinAvgTwoSliceTest
+    public class MinAvgTwoSliceTests
     {
         private MinAvgTwoSlice _minAvgTwoSlice;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_5
         {
             _minAvgTwoSlice = new MinAvgTwoSlice();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MinAvgTwoSlice_Example_Test()
@@ -30,14 +28,6 @@ namespace Tests.Lesson_5
 
             Test(array, 1);
         }
-
-        #endregion
-
-        #region Extremes tests
-        
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

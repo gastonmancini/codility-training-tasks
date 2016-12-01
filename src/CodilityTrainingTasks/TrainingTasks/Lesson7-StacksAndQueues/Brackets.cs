@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TrainingTasks.Lesson_7
+namespace TrainingTasks
 {
     public class Brackets
     {

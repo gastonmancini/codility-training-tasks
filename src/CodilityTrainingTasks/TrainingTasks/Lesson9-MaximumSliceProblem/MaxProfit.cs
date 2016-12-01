@@ -1,4 +1,4 @@
-﻿namespace TrainingTasks.Lesson_9
+﻿namespace TrainingTasks
 {
     public class MaxProfit
     {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_10;
+using TrainingTasks;
 
-namespace Tests.Lesson_10
+namespace Tests
 {
     [TestClass]
-    public class CountFactorsTest
+    public class CountFactorsTests
     {
         private CountFactors _countFactors;
 
@@ -14,17 +14,11 @@ namespace Tests.Lesson_10
             _countFactors = new CountFactors();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void CountFactors_Example_Test()
         {
             Test(24, 8);
         }
-
-        #endregion
-
-        #region Extremes tests
 
         [TestMethod]
         public void CountFactors_One()
@@ -49,8 +43,6 @@ namespace Tests.Lesson_10
         {
             Test(int.MaxValue, 2);
         }
-
-        #endregion
 
         private void Test(int N, int expectedResult)
         {

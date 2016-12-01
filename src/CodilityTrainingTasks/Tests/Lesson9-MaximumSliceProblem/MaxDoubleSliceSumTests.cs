@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_9;
+using TrainingTasks;
 
-namespace Tests.Lesson_9
+namespace Tests
 {
     [TestClass]
-    public class MaxDoubleSliceSumTest
+    public class MaxDoubleSliceSumTests
     {
         private MaxDoubleSliceSum _maxDoubleSliceSum;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_9
         {
             _maxDoubleSliceSum = new MaxDoubleSliceSum();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MaxDoubleSliceSum_Example_Test()
@@ -31,14 +29,6 @@ namespace Tests.Lesson_9
 
             Test(A, 17);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

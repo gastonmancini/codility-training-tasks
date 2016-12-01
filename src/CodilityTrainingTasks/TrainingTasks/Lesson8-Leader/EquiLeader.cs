@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace TrainingTasks.Lesson_8
+﻿namespace TrainingTasks
 {
     public class EquiLeader
     {

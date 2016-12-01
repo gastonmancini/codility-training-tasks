@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_8;
+using TrainingTasks;
 
-namespace Tests.Lesson_8
+namespace Tests
 {
     [TestClass]
-    public class EquiLeaderTest
+    public class EquiLeaderTests
     {
         private EquiLeader _equiLeader;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_8
         {
             _equiLeader = new EquiLeader();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void EquiLeader_Example_Test()
@@ -29,14 +27,6 @@ namespace Tests.Lesson_8
 
             Test(A, 2);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

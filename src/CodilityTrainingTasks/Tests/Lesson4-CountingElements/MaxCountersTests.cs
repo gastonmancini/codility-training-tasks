@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_4;
+using TrainingTasks;
 
-namespace Tests.Lesson_4
+namespace Tests
 {
     [TestClass]
-    public class MaxCountersTest
+    public class MaxCountersTests
     {
         private MaxCounters _maxCounters;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_4
         {
             _maxCounters = new MaxCounters();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MaxCounters_Example_Test()
@@ -39,8 +37,6 @@ namespace Tests.Lesson_4
 
             Test(N, array, expectedResult);
         }
-
-        #endregion
 
         private void Test(int N, int[] a, int[] expectedResult)
         {

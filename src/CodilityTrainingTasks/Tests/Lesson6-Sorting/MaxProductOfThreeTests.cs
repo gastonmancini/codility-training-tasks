@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_6;
+using TrainingTasks;
 
-namespace Tests.Lesson_6
+namespace Tests
 {
     [TestClass]
-    public class MaxProductOfThreeTest
+    public class MaxProductOfThreeTests
     {
         private MaxProductOfThree _maxProductOfThree;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_6
         {
             _maxProductOfThree = new MaxProductOfThree();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MaxProductOfThree_Example_Test()
@@ -28,14 +26,6 @@ namespace Tests.Lesson_6
             array[5] = 6;
             Test(array, 60);
         }
-
-        #endregion
-
-        #region Extremes tests
-        
-        // TODO
-
-        #endregion
 
         private void Test(int[] A, int expectedResult)
         {

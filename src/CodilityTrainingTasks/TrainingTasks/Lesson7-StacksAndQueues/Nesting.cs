@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_7
+namespace TrainingTasks
 {
     public class Nesting
     {

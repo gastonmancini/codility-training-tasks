@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_5
+namespace TrainingTasks
 {
     public class MinAvgTwoSlice
     {

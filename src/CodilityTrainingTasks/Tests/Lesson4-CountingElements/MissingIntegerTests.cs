@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_4;
+using TrainingTasks;
 
-namespace Tests.Lesson_4
+namespace Tests
 {
     [TestClass]
-    public class MissingIntegerTest
+    public class MissingIntegerTests
     {
         private MissingInteger _missingInteger;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_4
         {
             _missingInteger = new MissingInteger();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void MissingInteger_Example_Test()
@@ -28,14 +26,6 @@ namespace Tests.Lesson_4
             array[5] = 2;
             Test(array, 5);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] a, int expectedResult)
         {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace TrainingTasks.Lesson_2
+namespace TrainingTasks
 {
     public class CyclicRotation
     {

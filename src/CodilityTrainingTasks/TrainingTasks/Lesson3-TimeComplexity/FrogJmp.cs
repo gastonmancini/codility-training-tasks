@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_3
+namespace TrainingTasks
 {
     public class FrogJmp
     {

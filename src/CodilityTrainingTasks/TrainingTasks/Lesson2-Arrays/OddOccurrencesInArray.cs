@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_2
+namespace TrainingTasks
 {
     public class OddOccurrencesInArray
     {

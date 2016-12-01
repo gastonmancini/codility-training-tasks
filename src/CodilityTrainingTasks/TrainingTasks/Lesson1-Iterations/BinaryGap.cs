@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_1
+namespace TrainingTasks
 {
     public class BinaryGap
     {

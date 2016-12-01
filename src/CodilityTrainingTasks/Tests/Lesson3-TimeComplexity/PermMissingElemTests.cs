@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_3;
+using TrainingTasks;
 
-namespace Tests.Lesson_3
+namespace Tests
 {
     [TestClass]
-    public class PermMissingElemTest
+    public class PermMissingElemTests
     {
         private PermMissingElem _permMissingElem;
 
@@ -14,17 +14,11 @@ namespace Tests.Lesson_3
             _permMissingElem = new PermMissingElem();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void PermMissingElem_Example_Test()
         {
             Test(new[] { 2, 3, 1, 5 }, 4);
         }
-
-        #endregion
-
-        #region Extremes tests
 
         [TestMethod]
         public void PermMissingElem_Huge_Array()
@@ -89,8 +83,6 @@ namespace Tests.Lesson_3
 
             Test(array, 4);
         }
-
-        #endregion
 
         private void Test(int[] array, int expectedResult)
         {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_5;
+using TrainingTasks;
 
-namespace Tests.Lesson_5
+namespace Tests
 {
     [TestClass]
-    public class PassingCarsTest
+    public class PassingCarsTests
     {
         private PassingCars _passingCars;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_5
         {
             _passingCars = new PassingCars();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void PassingCars_Example_Test()
@@ -27,15 +25,6 @@ namespace Tests.Lesson_5
             array[4] = 1;
             Test(array, 5);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-
-        // TODO
-
-        #endregion
 
         private void Test(int[] a, int expectedResult)
         {

@@ -1,4 +1,4 @@
-﻿namespace TrainingTasks.Lesson_4
+﻿namespace TrainingTasks
 {
     public class MaxCounters
     {

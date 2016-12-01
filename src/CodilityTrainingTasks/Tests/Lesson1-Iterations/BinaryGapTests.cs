@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_1;
+using TrainingTasks;
 
-namespace Tests.Lesson_1
+namespace Tests
 {
     [TestClass]
-    public class BinaryGapTest
+    public class BinaryGapTests
     {
         private BinaryGap _binaryGap;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_1
         {
             _binaryGap = new BinaryGap();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void BinaryGap_Number_9_Should_Return_2()
@@ -51,10 +49,6 @@ namespace Tests.Lesson_1
             TestNumber(15, 0);
         }
 
-        #endregion
-
-        #region Extremes tests
-
         [TestMethod]
         public void BinaryGap_Number_1_Should_Return_0()
         {
@@ -66,8 +60,6 @@ namespace Tests.Lesson_1
         {
             TestNumber(2147483647, 0);
         }
-        
-        #endregion
 
         private void TestNumber(int number, int expectedResult)
         {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_3;
+using TrainingTasks;
 
-namespace Tests.Lesson_3
+namespace Tests
 {
     [TestClass]
-    public class TapeEquilibriumTest
+    public class TapeEquilibriumTests
     {
         private TapeEquilibrium _tapeEquilibrium;
 
@@ -14,17 +14,11 @@ namespace Tests.Lesson_3
             _tapeEquilibrium = new TapeEquilibrium();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void TapeEquilibrium_Example_Test()
         {
             Test(new[] { 3, 1, 2, 4, 3 }, 1);
         }
-
-        #endregion
-
-        #region Extremes tests
         
         [TestMethod]
         public void TapeEquilibrium_Huge_Array_With_Highest_Values()
@@ -48,8 +42,6 @@ namespace Tests.Lesson_3
             
             Test(smallArray, 0);
         }
-
-        #endregion
 
         private void Test(int[] array, int expectedResult)
         {

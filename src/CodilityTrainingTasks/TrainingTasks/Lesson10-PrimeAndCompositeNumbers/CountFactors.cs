@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrainingTasks.Lesson_10
+namespace TrainingTasks
 {
     public class CountFactors
     {

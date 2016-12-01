@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_2;
+using TrainingTasks;
 
-namespace Tests.Lesson_2
+namespace Tests
 {
     [TestClass]
-    public class OddOccurrencesInArrayTest
+    public class OddOccurrencesInArrayTests
     {
         private OddOccurrencesInArray _oddOccurrencesInArray;
 
@@ -13,8 +13,6 @@ namespace Tests.Lesson_2
         {
             _oddOccurrencesInArray = new OddOccurrencesInArray();
         }
-
-        #region Example Tests
 
         [TestMethod]
         public void OddOccurrencesInArray_ExampleTest()
@@ -26,14 +24,6 @@ namespace Tests.Lesson_2
 
             Test(new[] { 9, 3, 9, 3, 9, 7, 9 }, 7);
         }
-
-        #endregion
-
-        #region Extremes tests
-
-        // TODO Test correctness and extremes
-        
-        #endregion
 
         private void Test(int[] array, int expectedResult)
         {

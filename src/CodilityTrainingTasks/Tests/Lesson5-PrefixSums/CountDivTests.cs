@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrainingTasks.Lesson_5;
+using TrainingTasks;
 
-namespace Tests.Lesson_5
+namespace Tests
 {
     [TestClass]
-    public class CountDivTest
+    public class CountDivTests
     {
         private CountDiv _countDiv;
 
@@ -14,21 +14,11 @@ namespace Tests.Lesson_5
             _countDiv = new CountDiv();
         }
 
-        #region Example Tests
-
         [TestMethod]
         public void CountDiv_Example_Test()
         {
             Test(6, 11, 2, 3);
         }
-
-        #endregion
-
-        #region Extremes tests
-        
-        // TODO
-
-        #endregion
 
         private void Test(int A, int B, int K, int expectedResult)
         {
