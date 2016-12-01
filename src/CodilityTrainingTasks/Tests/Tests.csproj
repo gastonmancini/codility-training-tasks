@@ -50,32 +50,32 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Lesson 10\MinPerimeterRectangleTest.cs" />
-    <Compile Include="Lesson 10\CountFactorsTest.cs" />
-    <Compile Include="Lesson 1\BinaryGapTest.cs" />
-    <Compile Include="Lesson 2\OddOccurrencesInArrayTest.cs" />
-    <Compile Include="Lesson 2\CyclicRotationTest.cs" />
-    <Compile Include="Lesson 3\PermMissingElemTest.cs" />
-    <Compile Include="Lesson 3\TapeEquilibriumTest.cs" />
-    <Compile Include="Lesson 3\FrogJmpTest.cs" />
-    <Compile Include="Lesson 4\MissingIntegerTest.cs" />
-    <Compile Include="Lesson 4\MaxCountersTest.cs" />
-    <Compile Include="Lesson 4\PermCheckTest.cs" />
-    <Compile Include="Lesson 4\FrogRiverOneTest.cs" />
-    <Compile Include="Lesson 5\MinAvgTwoSliceTest.cs" />
-    <Compile Include="Lesson 5\CountDivTest.cs" />
-    <Compile Include="Lesson 5\PassingCarsTest.cs" />
-    <Compile Include="Lesson 6\MaxProductOfThreeTest.cs" />
-    <Compile Include="Lesson 6\TriangleTest.cs" />
-    <Compile Include="Lesson 6\DistinctTest.cs" />
-    <Compile Include="Lesson 7\NestingTest.cs" />
-    <Compile Include="Lesson 7\BracketsTest.cs" />
-    <Compile Include="Lesson 7\FishTest.cs" />
-    <Compile Include="Lesson 8\DominatorTest.cs" />
-    <Compile Include="Lesson 8\EquiLeaderTest.cs" />
-    <Compile Include="Lesson 9\MaxSliceSumTest.cs" />
-    <Compile Include="Lesson 9\MaxDoubleSliceSumTest.cs" />
-    <Compile Include="Lesson 9\MaxProfitTest.cs" />
+    <Compile Include="Lesson10-PrimeAndCompositeNumbers\MinPerimeterRectangleTest.cs" />
+    <Compile Include="Lesson10-PrimeAndCompositeNumbers\CountFactorsTest.cs" />
+    <Compile Include="Lesson1-Iterations\BinaryGapTest.cs" />
+    <Compile Include="Lesson2-Arrays\OddOccurrencesInArrayTest.cs" />
+    <Compile Include="Lesson2-Arrays\CyclicRotationTest.cs" />
+    <Compile Include="Lesson3-TimeComplexity\PermMissingElemTest.cs" />
+    <Compile Include="Lesson3-TimeComplexity\TapeEquilibriumTest.cs" />
+    <Compile Include="Lesson3-TimeComplexity\FrogJmpTest.cs" />
+    <Compile Include="Lesson4-CountingElements\MissingIntegerTest.cs" />
+    <Compile Include="Lesson4-CountingElements\MaxCountersTest.cs" />
+    <Compile Include="Lesson4-CountingElements\PermCheckTest.cs" />
+    <Compile Include="Lesson4-CountingElements\FrogRiverOneTest.cs" />
+    <Compile Include="Lesson5-PrefixSums\MinAvgTwoSliceTest.cs" />
+    <Compile Include="Lesson5-PrefixSums\CountDivTest.cs" />
+    <Compile Include="Lesson5-PrefixSums\PassingCarsTest.cs" />
+    <Compile Include="Lesson6-Sorting\MaxProductOfThreeTest.cs" />
+    <Compile Include="Lesson6-Sorting\TriangleTest.cs" />
+    <Compile Include="Lesson6-Sorting\DistinctTest.cs" />
+    <Compile Include="Lesson7-StacksAndQueues\NestingTest.cs" />
+    <Compile Include="Lesson7-StacksAndQueues\BracketsTest.cs" />
+    <Compile Include="Lesson7-StacksAndQueues\FishTest.cs" />
+    <Compile Include="Lesson8-Leader\DominatorTest.cs" />
+    <Compile Include="Lesson8-Leader\EquiLeaderTest.cs" />
+    <Compile Include="Lesson9-MaximumSliceProblem\MaxSliceSumTest.cs" />
+    <Compile Include="Lesson9-MaximumSliceProblem\MaxDoubleSliceSumTest.cs" />
+    <Compile Include="Lesson9-MaximumSliceProblem\MaxProfitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
