@@ -4,52 +4,30 @@ namespace TrainingTasks.Lesson_6
 {
     public class Triangle
     {
+        /// <summary>
+        /// Sort the array so we satisfy <![CDATA[ 0 ≤ P < Q < R < N ]]>
+        /// Then iterate the array check if the ordered elements in the array satisfy the 3 given conditions
+        /// Tip: cast values to long to avoid overflow
+        /// Time-complexity: O(n*log(n))
+        /// Space-complexity: O(n)
+        /// </summary>
         public int solution(int[] A)
         {
             Array.Sort(A);
 
-            for (int i = 0; i < A.Length - 2; i++)
+            for (int i = 0; i <= A.Length - 3; i++) // There should be at least 3 elements in the array
             {
-                if (A[i] >= 0 && A[i] > A[i + 2] - A[i + 1]) return 1;
+                if ((long)A[i] + A[i + 1] > A[i + 2] &&
+                    (long)A[i + 1] + A[i + 2] > A[i] &&
+                    (long)A[i + 2] + A[i] > A[i + 1])
+                {
+                    return 1;
+                }
             }
 
             return 0;
         }
 
-        //private int N3(int[] A)
-        //{
-        //    // O(N ** 3)
-
-        //    var combinations = Enumerable.Range(0, A.Length)
-        //        .SelectMany(
-        //            x =>
-        //            Enumerable.Range(0, A.Length)
-        //            .SelectMany(
-        //            y =>
-        //            Enumerable.Range(0, A.Length)
-        //            .Select(
-        //            z => new Tuple<int, int, int>(x, y, z))));
-
-        //    int P, Q, R;
-
-        //    foreach (var tuple in combinations)
-        //    {
-        //        P = tuple.Item1;
-        //        Q = tuple.Item2;
-        //        R = tuple.Item3;
-
-        //        if ((A[P] + A[Q] > A[R]) &&
-        //            (A[Q] + A[R] > A[P]) &&
-        //            (A[R] + A[P] > A[Q]) &&
-        //            0 <= P && P < Q && Q < R && R < A.Length)
-        //        {
-        //            return 1;
-        //        }
-        //    }
-
-        //    return 0;
-        //}
-
-
+        // https://codility.com/demo/results/trainingAHGG53-RVC/
     }
 }

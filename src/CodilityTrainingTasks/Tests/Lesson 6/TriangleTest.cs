@@ -17,7 +17,7 @@ namespace Tests.Lesson_6
         #region Example Tests
 
         [TestMethod]
-        public void Distinct_Example_Test_Exist_Triangular_Triplet()
+        public void Triangle_Example_Test_Exist_Triangular_Triplet()
         {
             var array = new int[6];
             array[0] = 10;
@@ -30,7 +30,7 @@ namespace Tests.Lesson_6
         }
 
         [TestMethod]
-        public void Distinct_Example_Test_Not_Exist_Triangular_Triplet()
+        public void Triangle_Example_Test_Not_Exist_Triangular_Triplet()
         {
             var array = new int[4];
             array[0] = 10;
@@ -44,7 +44,15 @@ namespace Tests.Lesson_6
 
         #region Extremes tests
 
-        // TODO
+        [TestMethod]
+        public void Triangle_Extreme_Test_Arith_Overflow()
+        {
+            var array = new int[3];
+            array[0] = int.MaxValue;
+            array[1] = int.MaxValue;
+            array[2] = int.MaxValue;
+            Test(array, 1);
+        }
 
         #endregion
 
