@@ -5,34 +5,39 @@ namespace TrainingTasks
 {
     public class Fish
     {
+        /// <summary>
+        /// Iterate for each fish and push in the stack the position of the survival ones.
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(N)
+        /// </summary>
         public int solution(int[] A, int[] B)
         {
-            var stack = new Stack<int>();
+            var survivalsStack = new Stack<int>();
 
             for (int i = 0; i < B.Length; i++)
             {
                 // Push the first fish
-                if (stack.Count == 0)
+                if (survivalsStack.Count == 0)
                 {
-                    stack.Push(i);
+                    survivalsStack.Push(i);
                     continue;
                 }
 
                 // Get the previous fish
-                var previous = stack.Peek();
+                var previous = survivalsStack.Peek();
                 
                 // The current fish goes upstream and the previous fish goes downstream
-                if (B[previous] == 1 && B[i] == 0 )
+                if (B[previous] == 1 && B[i] == 0)
                 {
                     bool fishAlive = true;
 
                     // There is any fish and they go in different directions
-                    while (stack.Any() && B[previous] != B[i])
+                    while (survivalsStack.Any() && B[previous] != B[i])
                     {
                         if (A[previous] < A[i])
                         {
                             // The previous fish was eaten
-                            stack.Pop();
+                            survivalsStack.Pop();
                         }
                         else
                         {
@@ -41,20 +46,22 @@ namespace TrainingTasks
                             break;
                         }
 
-                        if (stack.Any()) previous = stack.Peek();
+                        if (survivalsStack.Any()) previous = survivalsStack.Peek();
                     }
 
                     // If the current fish didn't die
-                    if (fishAlive) stack.Push(i);
+                    if (fishAlive) survivalsStack.Push(i);
                 }
                 else
                 {
                     // Go in the same direction
-                    stack.Push(i);
+                    survivalsStack.Push(i);
                 }
             }
 
-            return stack.Count;
+            return survivalsStack.Count;
         }
+
+        // https://codility.com/demo/results/trainingP574HE-VB8/
     }
 }

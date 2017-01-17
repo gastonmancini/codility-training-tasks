@@ -58,6 +58,7 @@
     <Compile Include="Lesson6-Sorting\MaxProductOfThree.cs" />
     <Compile Include="Lesson6-Sorting\Triangle.cs" />
     <Compile Include="Lesson6-Sorting\Distinct.cs" />
+    <Compile Include="Lesson7-StacksAndQueues\StoneWall.cs" />
     <Compile Include="Lesson7-StacksAndQueues\Nesting.cs" />
     <Compile Include="Lesson7-StacksAndQueues\Brackets.cs" />
     <Compile Include="Lesson7-StacksAndQueues\Fish.cs" />
@@ -88,6 +89,7 @@
     <None Include="Lesson6-Sorting\MaxProductOfThree.md" />
     <None Include="Lesson6-Sorting\Triangle.md" />
     <None Include="Lesson6-Sorting\Distinct.md" />
+    <None Include="Lesson7-StacksAndQueues\StoneWall.md" />
     <None Include="Lesson7-StacksAndQueues\Nesting.md" />
     <None Include="Lesson7-StacksAndQueues\Brackets.md" />
     <None Include="Lesson7-StacksAndQueues\Fish.md" />

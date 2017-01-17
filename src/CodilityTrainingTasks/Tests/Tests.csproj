@@ -68,6 +68,7 @@
     <Compile Include="Lesson6-Sorting\MaxProductOfThreeTests.cs" />
     <Compile Include="Lesson6-Sorting\TriangleTests.cs" />
     <Compile Include="Lesson6-Sorting\DistinctTests.cs" />
+    <Compile Include="Lesson7-StacksAndQueues\StoneWallTests.cs" />
     <Compile Include="Lesson7-StacksAndQueues\NestingTests.cs" />
     <Compile Include="Lesson7-StacksAndQueues\BracketsTests.cs" />
     <Compile Include="Lesson7-StacksAndQueues\FishTests.cs" />

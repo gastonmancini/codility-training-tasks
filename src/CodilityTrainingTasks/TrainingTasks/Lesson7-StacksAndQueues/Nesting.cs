@@ -1,35 +1,27 @@
-﻿using System;
-
-namespace TrainingTasks
+﻿namespace TrainingTasks
 {
     public class Nesting
     {
+        /// <summary>
+        /// The idea is to count the number of opening and closing parenthesis. 
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
+        /// </summary>
         public int solution(string S)
         {
-            if (string.IsNullOrEmpty(S)) return 1;
+            var parenthesisCount = 0;
 
-            var count = 0;
-            
-            foreach (char current in S)
+            foreach (var parenthesis in S)
             {
-                if (AreEqual(current, "("))
-                {
-                    count++;
-                }
-                else if (AreEqual(current, ")"))
-                {
-                    count--;
-                }
+                if (parenthesisCount < 0) return 0; // There is no properly nested because in that moment there are more closing parenthesis than opening ones. Example: ))((
 
-                if (count < 0) return 0;
+                if (parenthesis == '(') parenthesisCount++;
+                else parenthesisCount--;
             }
 
-            return count == 0 ? 1 : 0;
+            return parenthesisCount == 0 ? 1 : 0; // If the count is 0, then is properly nested
         }
 
-        private static bool AreEqual(char c, string s)
-        {
-            return c == Convert.ToChar(s);
-        }
+        // https://codility.com/demo/results/trainingBYVAB6-JN3/
     }
 }
