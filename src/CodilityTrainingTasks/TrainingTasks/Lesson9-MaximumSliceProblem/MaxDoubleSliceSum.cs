@@ -4,40 +4,50 @@ namespace TrainingTasks
 {
     public class MaxDoubleSliceSum
     {
+        /// <summary>
+        /// The solution uses Kanade's algorithm in two directions.
+        /// We calculate the max contiguous sum starting at a point i and the max contiguous sum ending at point i.
+        /// Finally we have to find the maximum sum of contiguousSumStartingAt[i-1] + contiguousSumEndingAt[i+1]. This is the max double slice sum.
+        /// 
+        /// If the numbers are all negative, then we should return zero.
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(N)
+        /// </summary>
         public int solution(int[] A)
         {
-            // Calculate the maximum sum subarray with one element missing
+            var N = A.Length;
 
-            int length = A.Length;
+            var contiguousSumStartingAt = new int[N];
 
-            int[] maxStartingHere = new int[length];
-            int maxSum = 0;
-
-            // Kadane's algorithm in reverse direction.
-            for (int i = length - 2; i > 0; i--)
+            // Start from 1, we can discard A[0] since by definition they can't be part of any double-slice sum.
+            // End at size of A - 2 to leave place to the other indexes
+            for (int i = 1; i <= N - 2; i++)
             {
-                maxSum = Math.Max(0, A[i] + maxSum);
-                maxStartingHere[i] = maxSum;
+                // A higher sum can always be found by dropping any negative-sum prefix
+                contiguousSumStartingAt[i] = Math.Max(contiguousSumStartingAt[i - 1] + A[i], 0);
             }
 
-            int[] maxEndingHere = new int[length];
-            maxSum = 0;
+            var contiguousSumEndingAt = new int[N];
 
-            // Kadane's algorithm in forward direction.
-            for (int i = 1; i < length - 1; i++)
+            // Start from size of A - 2 sice by definition A[N-1] is not part of any double-slice sum
+            // End at 1 so we discard A[0]
+            for (int i = N - 2; i >= 1; i--)
             {
-                maxSum = Math.Max(0, A[i] + maxSum);
-                maxEndingHere[i] = maxSum;
+                contiguousSumEndingAt[i] = Math.Max(contiguousSumEndingAt[i + 1] + A[i], 0);
             }
 
-            int maxDoubleSlice = 0;
+            int maxDoubleSliceSum = 0;
 
-            // Iterate arrays simultaneously and choose the 'Y' that has the maximum value of
-            for (int i = 0; i < length - 2; i++)
+            // Then, we iterate over i, and find the maximum sum of contiguousSumStartingAt[i-1] + contiguousSumEndingAt[i+1]. This is the max double slice sum.
+            for (int i = 1; i < N - 1; i++)
             {
-                maxDoubleSlice = Math.Max(maxDoubleSlice, maxEndingHere[i] + maxStartingHere[i + 2]);
+                var currentSum = contiguousSumStartingAt[i - 1] + contiguousSumEndingAt[i + 1];
+                if (maxDoubleSliceSum < currentSum) maxDoubleSliceSum = currentSum;
             }
-            return maxDoubleSlice;
+
+            return maxDoubleSliceSum;
         }
+
+        // https://codility.com/demo/results/trainingNYH4QU-TWS/
     }
 }

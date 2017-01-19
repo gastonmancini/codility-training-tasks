@@ -1,23 +1,33 @@
-﻿using System;
-
-namespace TrainingTasks
+﻿namespace TrainingTasks
 {
     public class MaxSliceSum
     {
+        /// <summary>
+        /// The idea is quite simple. Store the maxSliceSum and a currentMaxSliceSum.
+        /// The MaxSliceSum is initialized with the first element in the array.
+        /// Then we iterate all over the array and we start calculating the currentMaxSliceSum...
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
+        /// </summary>
         public int solution(int[] A)
         {
-            int maxSum = 0;
-            int maxSliceSum = int.MinValue;
+            var maxSliceSum = A[0];
+            var currentMaxSliceSum = 0;
 
-            // Kadane's algorithm
             for (int i = 0; i < A.Length; i++)
             {
-                maxSum = Math.Max(int.MinValue, A[i] + maxSum);
-                if (A[i] > maxSum) maxSum = A[i];
+                currentMaxSliceSum += A[i];
 
-                maxSliceSum = Math.Max(maxSliceSum, maxSum);
+                // If the current element itself is greater than the sum with the previous elements, then this is the new currentMaxSlice.
+                if (A[i] > currentMaxSliceSum) 
+                {
+                    currentMaxSliceSum = A[i];
+                }
+
+                // If the currentMaxSliceSum is greater than the final maxSliceSum, then we override it with the new value.
+                if (maxSliceSum < currentMaxSliceSum) maxSliceSum = currentMaxSliceSum;
             }
-            
+
             return maxSliceSum;
         }
     }

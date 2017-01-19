@@ -1,28 +1,37 @@
-﻿namespace TrainingTasks
+﻿using System;
+
+namespace TrainingTasks
 {
     public class MaxProfit
     {
+        /// <summary>
+        /// Keep track of the minimum value on the left and the maximum profit, and for each value in the array check the current profit.
+        /// If the current profit is greater than the maximum, then it is the new maxProfit
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
+        /// </summary>
         public int solution(int[] A)
         {
-            if (A == null || A.Length <= 0) return 0;
-            
-            int min = A[0];
-            int maxDiff = 0;
+            if (A.Length == 0) return 0; // The array can be emtpy
 
-            for (int i = 0; i < A.Length; i++)
+            var maxProfit = 0;
+            var minimumOnTheLeft = A[0];
+
+            for (int i = 0; i < A.Length - 1; i++)
             {
-                int currentDiff = A[i] - min;
-                if (currentDiff > maxDiff)
+                minimumOnTheLeft = Math.Min(minimumOnTheLeft, A[i]);
+
+                var currentProfit = A[i + 1] - minimumOnTheLeft;
+
+                if (maxProfit < currentProfit)
                 {
-                    maxDiff = currentDiff;
-                }
-                if (A[i] < min)
-                {
-                    min = A[i];
+                    maxProfit = currentProfit;
                 }
             }
 
-            return maxDiff;
+            return maxProfit < 0 ? 0 : maxProfit;
         }
+
+        // https://codility.com/demo/results/trainingUP452E-98H/
     }
 }

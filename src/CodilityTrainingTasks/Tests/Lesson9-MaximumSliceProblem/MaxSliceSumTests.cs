@@ -46,7 +46,7 @@ namespace Tests
             A[3] = -4;
             A[4] = 16;
 
-            Test(A, 6);
+            Test(A, 16);
         }
 
         private void Test(int[] A, int expectedResult)
