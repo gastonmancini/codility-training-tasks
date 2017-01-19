@@ -2,53 +2,56 @@
 {
     public class Dominator
     {
+        /// <summary>
+        /// The idea of the solution is to split this problem in two. First we try to find the candidate by counting the elements.
+        /// Then when we have our candidate we can check if it really is a dominator (occurs more than half of the elements of A).
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(1)
+        /// </summary>
         public int solution(int[] A)
         {
-            // An empty array does not have a dominator
-            if (A.Length == 0) return -1;
+            // First we try to find our candidate by counting the elements
+            var auxCounter = 0;
+            var candidate = 0;
 
-            int count = 0;
-            int candidate = 0;
-
-            // Find the dominator candidate
-            for (int i = 0; i < A.Length; i++)
+            foreach (var number in A)
             {
-                if (count == 0)
+                if (auxCounter == 0)
                 {
-                    candidate = A[i];
-                    count++;
+                    candidate = number;
+                    auxCounter++;
                 }
                 else
                 {
-                    if (A[i] != candidate)
+                    if (candidate == number)
                     {
-                        count--;
+                        auxCounter++;
                     }
                     else
                     {
-                        count++;
+                        auxCounter--;
                     }
                 }
             }
 
-            int index = 0;
-            int total = 0;
+            var candidateOccurreces = 0;
+            var index = 0; // Will contain the last index
 
-            // Find the last index of the candidate and count the total
+            // Once we have our candidate we have to check if it is a dominator (occurs more than half of the elements of A)
             for (int i = 0; i < A.Length; i++)
             {
                 if (A[i] == candidate)
                 {
+                    candidateOccurreces++;
                     index = i;
-                    total++;
                 }
             }
 
-            // Array does not have a dominator
-            if (total <= A.Length/2) return -1;
-
-            // Return the last index
+            if (candidateOccurreces <= A.Length/2) return -1;
+            
             return index;
         }
+
+        // https://codility.com/demo/results/trainingW632RP-WMM/
     }
 }

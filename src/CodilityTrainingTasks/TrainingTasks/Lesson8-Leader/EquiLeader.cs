@@ -1,67 +1,71 @@
-﻿namespace TrainingTasks
+﻿using System.Collections.Generic;
+
+namespace TrainingTasks
 {
     public class EquiLeader
     {
+        /// <summary>
+        /// We can divide this solution in three parts...
+        /// 1) We count all the elements in the array and store them in a dictionary
+        /// 2) Find if we have a leader, if not return
+        /// 3) Find the equileaders
+        /// Time-complexity: O(N)
+        /// Space-complexity: O(N)
+        /// </summary>
         public int solution(int[] A)
         {
-            // TODO
-            return 0;
+            // Create a dictionary that contains the count of the elements in the array
+            var elementsCount = new Dictionary<int, int>();
+
+            foreach (var number in A)
+            {
+                if (elementsCount.ContainsKey(number))
+                {
+                    elementsCount[number]++;
+                }
+                else
+                {
+                    elementsCount[number] = 1;
+                }
+            }
+
+            // Get the leader candidate - This could be done within the previous loop...
+            var leaderCandidate = 0;
+            var leaderCandidateCount = 0;
+            foreach (var candidate in elementsCount.Keys)
+            {
+                if (elementsCount[candidate] > leaderCandidateCount)
+                {
+                    leaderCandidate = candidate;
+                    leaderCandidateCount = elementsCount[candidate];
+                }
+            }
+
+            // If there is no leader return early. Is leader if it occurrs in more than a half of the array
+            if (leaderCandidateCount < A.Length/2) return 0;
+
+            // Find the equi-leaders
+            
+            var leadersInTheLeft = 0;
+            var equiLeadersCount = 0;
+
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] == leaderCandidate)
+                {
+                    leadersInTheLeft++;
+                }
+
+                if (leadersInTheLeft > (i + 1) / 2 // is leader in the left part if the leaders on the left are greater than the size of subarray / 2
+                    && (leaderCandidateCount - leadersInTheLeft) > (A.Length - i - 1) /2) // is leader in the right part if the leaders on the right are greater than the size of the subarray / 2
+                {
+                    equiLeadersCount++;
+                }
+            }
+
+            return equiLeadersCount;
         }
 
-        //public int Sloooooooowww(int[] A)
-        //{
-        //    var list = new List<int>(A);
-        //    int equiLeaderCount = 0;
-
-        //    for (int S = 1; S < A.Length ; S++)
-        //    {
-        //        var slice1 = list.GetRange(0, S);
-        //        var slice2 = list.GetRange(S, A.Length - S);
-
-        //        var slice1Leader = findLeader(slice1);
-        //        var slice2Leader = findLeader(slice2);
-
-        //        if (slice1Leader == slice2Leader)
-        //        {
-        //            equiLeaderCount++;
-        //        }
-
-        //    }
-
-        //    return equiLeaderCount;
-        //}
-
-        //private int findLeader(List<int> list)
-        //{
-        //    int size = 0;
-        //    int value = -1;
-
-        //    foreach (int elem in list)
-        //    {
-        //        if (size == 0)
-        //        {
-        //            size++;
-        //            value = elem;
-        //        }
-        //        else
-        //        {
-        //            if (value != elem)
-        //                size--;
-        //            else
-        //                size++;
-        //        }
-        //    }
-
-        //    int candidate = -1;
-
-        //    if (size > 0) candidate = value;
-
-        //    int count = list.Count(elem => elem == candidate);
-
-        //    if (count > list.Count / 2) return candidate;
-
-        //    return -1;
-        //}
-
+        // https://codility.com/demo/results/trainingWUQ2JW-U37/
     }
 }
