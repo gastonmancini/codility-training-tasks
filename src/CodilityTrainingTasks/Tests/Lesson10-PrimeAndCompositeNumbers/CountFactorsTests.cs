@@ -39,6 +39,24 @@ namespace Tests
         }
 
         [TestMethod]
+        public void CountFactors_Sixteen()
+        {
+            Test(16, 5);
+        }
+
+        [TestMethod]
+        public void CountFactors_ThirdtySix()
+        {
+            Test(36, 9);
+        }
+
+        [TestMethod]
+        public void CountFactors_FourtyTwo()
+        {
+            Test(42, 8);
+        }
+
+        [TestMethod]
         public void CountFactors_Max_Int()
         {
             Test(int.MaxValue, 2);

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lesson10-PrimeAndCompositeNumbers\Flags.cs" />
     <Compile Include="Lesson10-PrimeAndCompositeNumbers\MinPerimeterRectangle.cs" />
     <Compile Include="Lesson10-PrimeAndCompositeNumbers\CountFactors.cs" />
     <Compile Include="Lesson1-Iterations\BinaryGap.cs" />
@@ -71,6 +72,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Lesson10-PrimeAndCompositeNumbers\Flags.md" />
     <None Include="Lesson10-PrimeAndCompositeNumbers\MinPerimeterRectangle.md" />
     <None Include="Lesson10-PrimeAndCompositeNumbers\CountFactors.md" />
     <None Include="Lesson1-Iterations\BinaryGap.md" />

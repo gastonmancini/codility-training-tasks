@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Lesson10-PrimeAndCompositeNumbers\FlagsTests.cs" />
     <Compile Include="Lesson10-PrimeAndCompositeNumbers\MinPerimeterRectangleTests.cs" />
     <Compile Include="Lesson10-PrimeAndCompositeNumbers\CountFactorsTests.cs" />
     <Compile Include="Lesson1-Iterations\BinaryGapTests.cs" />
