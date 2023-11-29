@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TrainingTasks
 {
@@ -49,5 +50,35 @@ namespace TrainingTasks
 
         //    // https://codility.com/demo/results/trainingC2G9WH-HT8/
         //}
+
+        public int solutionV2(int[] A)
+        {
+            var values = new Dictionary<int, int>();
+            for (int i = 0; i < A.Length; i++)
+            {
+                var index = A[i];
+                if (values.TryGetValue(index, out var value))
+                {
+                    values[index] = value + 1;
+                }
+                else
+                {
+                    values.Add(index, 1);
+                }
+
+            }
+            int unpaired = -1;
+            foreach (var value in values.Keys)
+            {
+                var count = values[value];
+                if (count % 2 != 0)
+                {
+                    unpaired = value;
+                    break;
+                }
+            }
+            return unpaired;
+            // https://app.codility.com/demo/results/trainingX8GCSS-AC8/
+        }
     }
 }
