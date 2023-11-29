@@ -13,5 +13,12 @@ namespace TrainingTasks
         {
             return (int)Math.Ceiling((decimal)(Y - X)/D);
         }
+
+        public int solutionV2(int X, int Y, int D)
+        {
+            return (int)Math.Ceiling((double)(Y - X) / D);
+
+            // https://app.codility.com/demo/results/trainingF2D2WC-MK2/
+        }
     }
 }
